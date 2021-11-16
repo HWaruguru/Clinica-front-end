@@ -25,4 +25,11 @@ export class RegisterComponent implements OnInit {
       const password = form.value.password;
       const c_password = form.value.c_password;
 
+       // check if passwords match
+   if (password !== c_password) {
+    alert('Passwords do not match');
+    return;
+  }
+
+
 }
