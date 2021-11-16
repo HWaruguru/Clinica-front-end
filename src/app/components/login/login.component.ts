@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { DetailsService } from '../services/details.service'
+import { DetailsService } from '../../services/details.service'
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private service: DetailsService, private router:Router) { }
 
-  message;
+  // message;
 
   ngOnInit(): void {
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { DetailsService } from '../services/details.service'
+import { DetailsService } from '../../services/details.service'
 
 @Component({
   selector: 'app-register',
@@ -18,12 +18,13 @@ export class RegisterComponent implements OnInit {
 
   showSuccessMessage = false;
 
+
     // create a new user
-    onSubmit(form: NgForm) {
-      const username = form.value.username;
-      const email = form.value.email;
-      const password = form.value.password;
-      const c_password = form.value.c_password;
+  onSubmit(form: NgForm) {
+    const username = form.value.username;
+    const email = form.value.email;
+    const password = form.value.password;
+    const c_password = form.value.c_password;
 
        // check if passwords match
    if (password !== c_password) {
@@ -33,13 +34,13 @@ export class RegisterComponent implements OnInit {
 
 
   this.service
-  .createUser(username, email, password)
-  .subscribe((response) => {
-    console.log(response);
-    this.showSuccessMessage = true;
+   .createUser(username, email, password)
+   .subscribe((response) => {
+     console.log(response);
+     this.showSuccessMessage = true;
   });
 
-form.reset();
+ form.reset();
 
 }
 }
