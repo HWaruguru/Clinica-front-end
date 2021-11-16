@@ -10,9 +10,19 @@ import { DetailsService } from '../services/details.service'
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: DetailsService) { }
+
 
   ngOnInit(): void {
   }
+
+  showSuccessMessage = false;
+
+    // create a new user
+    onSubmit(form: NgForm) {
+      const username = form.value.username;
+      const email = form.value.email;
+      const password = form.value.password;
+      const c_password = form.value.c_password;
 
 }
