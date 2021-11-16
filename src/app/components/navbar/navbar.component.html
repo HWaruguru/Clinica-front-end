@@ -1,36 +1,32 @@
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-all sticky-top ">
-        <div class="container-fluid">
-            <span>
-                <a href="/" class="navbar-brand nav-link navTexts">
-                    <img src="assets/images/pinkbaby.png"  alt="" width="100" height="100" class="logoStyle">
-                </a>
-            </span>
-          
-            <div class="spacer"></div>
-          <span class="navbar-brand brand-name"><a class="nav-link active title1" aria-current="page">{{title}}</a></span>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 about">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >Contact Us</a>
-              </li>
-              
-            </ul>
-            <span class=" form-inline my-2 my-lg-0 auth sign">
-              <a class="nav-link" ><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;
-                Login</a>
-              <a class="nav-link" ><i class="fa fa-sign-up" aria-hidden="true"></i>&nbsp;
-                Sign Up</a>
-              <a class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
-                Logout</a>
-            </span>
-          </div>
-        </div>
-      </nav>
+
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+<body>
+<div class= "container">
+  <header>
+    <nav>
+      
+       
+          <a class="navbar-brand" href="#" style="font-size: 1.5rem;margin-right: -210px;">
+            <img src="https://previews.123rf.com/images/anastasialila/anastasialila1909/anastasialila190900028/133012872-logo-baby-health-icon-massage-or-doctor-care-icon-body-child-symbol-silhouette.jpg" alt="" width="30" height="30">
+          </a>       
+     <h1 style="color: rgb(145, 13, 116); font-size:30px">Clinica</h1>
+     
+      <div class = "menu">
+        <ul style="color:rgb(145, 13, 116)">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class ="login">
+        <ul>
+          <li><a routerLink="/register" style="text-decoration: none; color:rgb(145, 13, 116)"> SignUp</a></li>
+          <li><a routerLink="/login" style="text-decoration: none; color:rgb(145, 13, 116)">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
+</body>
