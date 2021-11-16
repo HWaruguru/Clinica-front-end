@@ -32,4 +32,14 @@ export class RegisterComponent implements OnInit {
   }
 
 
+  this.service
+  .createUser(username, email, password)
+  .subscribe((response) => {
+    console.log(response);
+    this.showSuccessMessage = true;
+  });
+
+form.reset();
+
+}
 }

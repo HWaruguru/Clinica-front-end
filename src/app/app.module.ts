@@ -12,6 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LandingComponent } from './components/landing/landing.component';
 
+import { DetailsService } from './services/details.service';
+
 @NgModule({
   declarations: [
     AppComponent,
