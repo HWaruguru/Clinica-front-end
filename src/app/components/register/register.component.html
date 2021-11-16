@@ -1,169 +1,67 @@
-<!-- <div class="container-fluid">
-<main class="form-signin">
-    <form>
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    
-      <div class="form-floating">
-        <input class="form-control" id="floatingPassword" placeholder="Name">
-        <label for="floatingPassword">Name</label>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+        <div class="card-img-left d-none d-md-flex">
+          <!-- Background image for card set in CSS! -->
+        </div>
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-5">Register</h5>
+          <div class="alert alert-success" role="alert" *ngIf="showSuccessMessage">
+            Account created successfully! Proceed to login.
+          </div>
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required
+                autofocus ngModel name="username" username>
+              <label for="floatingInputUsername">Username</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com"
+                name="email" ngModel email required>
+              <label for="floatingInputEmail">Email address</label>
+            </div>
+
+            <hr>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                ngModel password required>
+              <label for="floatingPassword">Password</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password"
+                name="c_password" ngModel c_password required>
+              <label for="floatingPasswordConfirm">Confirm Password</label>
+            </div>
+
+            <div class="d-grid mb-2">
+              <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit"
+                [disabled]="!f.valid">Register</button>
+            </div>
+
+            <a class="d-block text-center mt-2 small" routerLink="/login">Have an account? Sign In</a>
+
+            <hr class="my-4">
+
+            <!-- <div class="d-grid mb-2">
+              <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-google me-2"></i> Sign up with Google
+              </button>
+            </div> -->
+
+            <!-- <div class="d-grid">
+              <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-facebook-f me-2"></i> Sign up with Facebook
+              </button>
+            </div> -->
+
+          </form>
+        </div>
       </div>
-      <div class="form-floating">
-        <input  class="form-control" id="floatingPassword" placeholder="Phone Number">
-        <label for="floatingPassword">Phone Number</label>
-      </div>
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
-        <label for="floatingPassword">Confirm Password</label>
-      </div>
-  
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    </form>
-  </main>
-  </div> -->
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>RegistrationForm_v2 by Colorlib</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-
-	<body>
-
-		<div class="wrapper" style="background-image: url('https://www.babycenter.com/ims/2015/01/iStock_19788447_wide.jpg');">
-			<div class="inner">
-				<form action="">
-					<h3>Registration Form</h3>
-					<div class="form-group">
-						<div class="form-wrapper">
-							<label for="">First Name</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-wrapper">
-							<label for="">Last Name</label>
-							<input type="text" class="form-control">
-						</div>
-					</div>
-					<div class="form-wrapper">
-						<label for="">Email</label>
-						<input type="text" class="form-control">
-					</div>
-					<div class="form-wrapper">
-						<label for="">Password</label>
-						<input type="password" class="form-control">
-					</div>
-					<div class="form-wrapper">
-						<label for="">Confirm Password</label>
-						<input type="password" class="form-control">
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox"> I caccept the Terms of Use & Privacy Policy.
-							<span class="checkmark"></span>
-						</label>
-					</div>
-					<button>Register Now</button>
-				</form>
-			</div>
-		</div>
-		
-	</body>
-</html> -->
-
-
-
-	<!-- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Easiest Way to Add Input Masks to Your Forms</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="registration-form">
-        <form>
-            <div class="form-icon">
-                <span><i class="icon icon-user"></i></span>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control item" id="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="birth-date" placeholder="Birth Date">
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-block create-account">Create Account</button>
-            </div>
-        </form>
-     
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-</html> -->
-
-
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-</head>
-
-<body>
-    <div class="login-dark">
-        <form method="post">
-            <h2 class="sr-only" style="color: rgb(145, 13, 116);">Register</h2>
-            <h2 class="text-center" style="color: rgb(145, 13, 116);">Register</h2>
-            <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username"></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-			<div class="form-group"><input class="form-control" type="tel" name="phone" placeholder="Phone Number"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-			<div class="form-group"><input class="form-control" type="password" name="password" placeholder="Confirm Password"></div>
-
-			<div class="form-group"><button class="btn btn-block text-light" type="submit" style="background-color: rgb(145, 13, 116);">Sign In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+  </div>
+</div>
