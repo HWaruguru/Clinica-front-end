@@ -11,3 +11,77 @@
     
 }
 
+
+h1{
+    position: absolute;
+    left: 50px;
+    top: 230px;
+    width: 600px;
+    padding: 10px;  
+    animation: moveright 1s linear 1;
+    animation-delay: 0s;
+    visibility: hidden;
+    animation-fill-mode:forwards;
+}
+
+@keyframes moveright{
+0% {
+    transform: translateX(-100px);
+    visibility: visible;
+}    
+100%{
+    transform: translateX(0);
+    visibility: visible;
+}
+}
+
+
+
+h2{
+    position: absolute;
+    left: 50px;
+    top: 280px;
+    width: 600px;
+    padding: 10px; 
+    animation: moveright 1s linear 1;
+    animation-delay: 0s;
+    visibility: hidden;
+    animation-fill-mode:forwards;
+}
+
+@keyframes moveright{
+0% {
+    transform: translateX(-100px);
+    visibility: visible;
+}    
+100%{
+    transform: translateX(0);
+    visibility: visible;
+}
+}
+
+
+p {
+    position: absolute;
+    left: 50px;
+    top: 350px;
+    width: 600px;
+    padding: 10px;
+    animation: moveright 1s linear 1;
+    animation-delay: 0s;
+    visibility: hidden;
+    animation-fill-mode:forwards;
+}
+
+@keyframes moveright{
+0% {
+    transform: translateX(-100px);
+    visibility: visible;
+}    
+100%{
+    transform: translateX(0);
+    visibility: visible;
+}
+}
+
+

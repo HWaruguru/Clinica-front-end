@@ -1,14 +1,146 @@
 .about-section {
     /* background-image: url("https://thumbs.dreamstime.com/b/african-mother-feeding-baby-standing-white-background-panorama-cropped-happy-giving-bottle-milk-to-her-newborn-son-posing-214205880.jpg"); */
-    /* background-color: rgb(240, 228, 240); */
+    background-color: rgb(255, 255, 255);
     height: 80.5vh;
-    color: #fff;
+    color: rgb(223, 18, 18);
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -43px;
-    text-align: center
-    
-    
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+    color: #e01313;
+}
+
+/* p {
+    position: absolute;
+    left: 25%;
+    top: 150px;
+    width: 600px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+} */
+
+a{
+    color:rgb(0, 2, 139)
+
+}
+a:hover{
+    color:rgba(2, 0, 139, 0.233);
+    text-decoration: none
+}
+.team .member{
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    background:rgb(145, 13, 116)
+}
+
+.team .member .member-img{
+    position: relative;
+    overflow: hidden;
+}
+.team .member .social{
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+
+}
+
+.team .member:hover .social{
+    opacity: 1;
+    bottom: 15px;
+}
+.team .member .social a{
+    transition: color 0.3s;
+    color: #dacd19;
+    margin: 0 3px;
+    padding-top: 7px;
+    border-radius: 50px;
+    width: 36px;
+    height: 36px;
+    background:rgba(216, 6, 6, 0.233);
+    display: inline-block;
+    transition: ease-in-out 0.3s;
+    color: rgb(15, 236, 33);
+}
+
+.team .member .social a:hover{
+    background: rgb(145, 13, 116);
+}
+.team .member .social i{
+    font-size: 18px;
+}
+.team .member .member-info{
+    padding: 25px 15px;
+}
+.team .member .member-info h4{
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #000000;
+}
+.team .member .member-info span{
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+
+}
+
+
+section{
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.section-title{
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+}
+.section-title h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2::after{
+    content:"";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background:rgb(145, 13, 116);
+    bottom: 0;
+    left: calc(50% - 25px);
+
+}
+.section-title p{
+    margin-bottom: 0;
+}
+
+.section-bg{
+    padding: 120px 0;
+    color:rgb(0, 0, 0);   
+}
+
+.section-bg::before{
+    content:"";
+    background:rgba(145, 13, 116, 0.164);
+    position: absolute;
+    bottom: 60px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    transform: skewY(-3deg);
 }

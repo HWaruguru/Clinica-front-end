@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import "~font-awesome/css/font-awesome.css";
+
+
 .contact-section {
     /* background-image: url("https://thumbs.dreamstime.com/b/african-mother-feeding-baby-standing-white-background-panorama-cropped-happy-giving-bottle-milk-to-her-newborn-son-posing-214205880.jpg"); */
     /* background-color: rgb(240, 228, 240); */
     height: 80.5vh;
-    color: #fff;
+    color: rgb(7, 0, 0);
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,3 +14,171 @@
     margin-top: -43px;
     
 }
+/* p {
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    width: 600px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+} */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dreamstime.com%2Fhappy-childhood-african-mum-her-lovely-child-hugging-looking-camera-spending-time-together-copyspace-black-mother-daughter-image197043262&psig=AOvVaw3_I4dcPM-LMaGMU0-wDYLq&ust=1637232198692000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIDv1rebn_QCFQAAAAAdAAAAABAD");
+    background-size: cover;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+
+}
+
+.contact .content h4{
+    font-size: 36px;
+    font-weight:500;
+    color:rgb(145, 13, 116);
+
+}
+.contact .content p{
+ font-weight: 300;
+ color:rgb(223, 14, 14);
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.container .contactInfo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: rgba(145, 13, 116, 0.26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h5{
+    font-weight: 500;
+    color: rgb(145, 13, 116);
+
+
+}
+.contactForm{
+
+    width: 40%;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+
+}
+.contactForm h3
+{
+    font-size: 30px;
+    color:rgb(145, 13, 116);
+    font-weight: 500;
+
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+     width: 100%;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 10px 0;
+     border: none;
+     border-bottom: 2px solid #333;
+     outline: none;
+     resize: none;
+
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(104, 104, 104);
+
+
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox textarea:focus ~span,
+.contactForm .inputBox textarea:valid ~ span{
+    color:rgb(145, 13, 116);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: rgb(145, 13, 116);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm
+    {
+        width: 100%;
+    }
+}
+
+

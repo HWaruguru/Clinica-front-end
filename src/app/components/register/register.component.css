@@ -422,7 +422,23 @@
   color:#fff;
   opacity: 99;
   box-shadow:3px 3px 4px rgba(0,0,0,0.2);
-  }
+  /* animation: moveright 1s linear 1;
+  animation-delay: 0s;
+  visibility: hidden;
+  animation-fill-mode:forwards;
+}
+
+@keyframes moveright{
+0% {
+  transform: translateX(-100px);
+  visibility: visible;
+}    
+100%{
+  transform: translateX(0);
+  visibility: visible;
+} */
+}
+
   
   .login-dark .illustration {
   text-align:center;
