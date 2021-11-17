@@ -8,9 +8,14 @@ import {HttpClient} from '@angular/common/http';
 export class DetailsService {
 
     // add api url here
-    APIUrl='https://kitchen2030.herokuapp.com/api/latest-products/';
+    // APIUrl='https://clinicaappcci.herokuapp.com/app/api/';
 
-   
+    APIUrl='https://clinicaappcci.herokuapp.com/app/api/auth/login/';
+
+
+    token="60585863b8b3fe17772390cd1aa03064701e8195"
+  
+
 
   constructor(private http:HttpClient) { }
 
@@ -23,7 +28,8 @@ export class DetailsService {
           password: password,
           email: email,
           
-        }
+        },
+        
         // {
         //   headers: {
         //     Authorization: 'Token ' + this.token,
@@ -35,7 +41,7 @@ export class DetailsService {
         //  login user ==================>
     loginUser(username: string, password: string) {
       return this.http.post(
-        this.APIUrl + 'login/',
+        this.APIUrl,
         {
           username: username,
           password: password,
