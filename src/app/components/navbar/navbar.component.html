@@ -23,8 +23,9 @@
       </div>
       <div class ="login">
         <ul>
-          <li><a routerLink="/register" style="text-decoration: none; color:rgb(145, 13, 116)"> SignUp</a></li>
-          <li><a routerLink="/login" style="text-decoration: none; color:rgb(145, 13, 116)">Login</a></li>
+          <li *ngIf='currentUserValue()'><a (click)='logout()' style="text-decoration: none; color:rgb(145, 13, 116)"> SignOut</a></li>
+          <li *ngIf='!currentUserValue()'><a routerLink="/register" style="text-decoration: none; color:rgb(145, 13, 116)"> SignUp</a></li>
+          <li *ngIf='!currentUserValue()'><a routerLink="/login" style="text-decoration: none; color:rgb(145, 13, 116)">Login</a></li>
         </ul>
       </div>
     </nav>

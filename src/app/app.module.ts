@@ -13,6 +13,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     AboutComponent,
     ContactComponent,
-    LandingComponent
+    LandingComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
