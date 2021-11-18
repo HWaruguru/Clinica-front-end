@@ -22,7 +22,12 @@ export class LoginComponent implements OnInit {
     this.service.loginUser(username, password).subscribe(
       (response) => {
         console.log(response);
-        localStorage.setItem('currentUser', JSON.stringify(response));
+        this.service.getToken(username, password).subscribe(
+          (response: any) => {
+            console.log(response);
+            localStorage.setItem('currentUser', response.token);
+          }
+        );
         this.router.navigateByUrl('/home');
       },
       (error) => {

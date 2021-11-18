@@ -30,11 +30,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr *ngFor="let vac of immunizations" style="color: black;">
+                    <td>{{vac.vaccine}}</td>
+                    <td>{{vac.brandName}}</td>
+                    <td>{{vac.batchNumber}}</td>
+                    <td>{{vac.drugExpiry}}</td>
+                    <td>{{vac.dateGiven}}</td>
                   </tr>
                 </tbody>
               </table>

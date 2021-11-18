@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 
   currentUserValue() {
-    return JSON.parse(localStorage.getItem('currentUser'));
+    return localStorage.getItem('currentUser') || false;
   }
 
   logout() {

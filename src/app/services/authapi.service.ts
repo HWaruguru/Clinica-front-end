@@ -20,6 +20,22 @@ export class AuthapiService {
     });
   }
 
+  getToken(username: string, password: string) {
+    return this.http.post(this.APIUrl + '/api-auth/', {
+      username: username,
+      password: password,
+    });
+  }
+
+  getImmunizations() {
+    return this.http.get(this.APIUrl + '/app/api/vaccine/', {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('currentUser')}`,
+      }
+    });
+  }
+
+
   logout() {
     localStorage.removeItem('currentUser');
   }
