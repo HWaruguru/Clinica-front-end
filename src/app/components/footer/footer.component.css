@@ -11,14 +11,7 @@
   
   
   
-  a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent; }
-    a:hover {
-      color: #0056b3;
-      text-decoration: underline; }
-  
+
 
 
 
@@ -41,7 +34,7 @@
   
 
 
-  
+/*   
   
   footer {
     padding: 5px 0; }
@@ -55,7 +48,7 @@
      }
     .footer-07 .footer-heading {
       font-size: 30px;
-      color: rgb(240, 108, 229);
+      color: rgb(240, 108, 115);
       font-weight: 700;
       margin-bottom: 0px; 
     }
@@ -77,4 +70,4 @@
      {
       background: transparent;
       border: 1px solid #2b7d80;
-     }
+     } */
