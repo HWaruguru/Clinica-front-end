@@ -1,375 +1,211 @@
 <div class="home-section">
-  <div class="row" style="height: 100%;">
+  <div class="row" style="height: 100%">
     <div class="col-md-5 content">
-      <button class="btn btn-block text-light modalbtn" data-toggle="modal" data-target="#exampleModal" type="button">Immunization</button>
-      <button class="btn btn-block text-light modalbtn" data-toggle="modal" data-target="#graphModal" type="button">Growth Monitoring Chart</button>
-      <button class="btn btn-block text-light modalbtn" data-toggle="modal" data-target="#appointmentModal" type="button">Vaccination Appointments</button>
+      <button
+        class="btn btn-block text-light modalbtn"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        type="button"
+      >
+        Immunization
+      </button>
+      <button
+        class="btn btn-block text-light modalbtn"
+        data-toggle="modal"
+        data-target="#immunization"
+        type="button"
+      >
+        Growth Monitoring Chart
+      </button>
+      <button
+        class="btn btn-block text-light modalbtn"
+        data-toggle="modal"
+        data-target="#appointmentModal"
+        type="button"
+      >
+        Vaccination Appointments
+      </button>
     </div>
     <div class="col-md-7"></div>
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Immunization</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let vac of immunizations" style="color: black;">
-                    <td>{{vac.vaccine}}</td>
-                    <td>{{vac.brandName}}</td>
-                    <td>{{vac.batchNumber}}</td>
-                    <td>{{vac.drugExpiry}}</td>
-                    <td>{{vac.dateGiven}}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">OPV</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">At birth</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">14 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">ROTAVIRUS VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">6 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">PNEUMONIA VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">6 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">14 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">DIPTHERIA VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">6 Weeks</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">10 Weeks</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">14 Weeks</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">IPV VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">14 Weeks</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">YELLOW FEVER VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">9 Months</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">MEASLES VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">9 Months</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">18 Months</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">HPV VACCINE</th>
-                    <th scope="col">BRAND</th>
-                    <th scope="col">BATCH NUMBER</th>
-                    <th scope="col">EXPIRY DATE</th>
-                    <th scope="col">DATE GIVEN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">10 years</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">After 6 Months</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table> -->
-
+          <table class="table">
+            <thead
+              class="thead"
+              style="color: white; background-color: rgb(145, 13, 116)"
+            >
+              <tr>
+                <th scope="col">VACCINE</th>
+                <th scope="col">BRAND</th>
+                <th scope="col">BATCH NUMBER</th>
+                <th scope="col">EXPIRY DATE</th>
+                <th scope="col">DATE GIVEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vac of immunizations" style="color: black">
+                <td>{{ vac.vaccine }}</td>
+                <td>{{ vac.brandName }}</td>
+                <td>{{ vac.batchNumber }}</td>
+                <td>{{ vac.drugExpiry }}</td>
+                <td>{{ vac.dateGiven }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn"  style="color: white; background-color: rgb(145, 13, 116);">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn"
+            style="color: white; background-color: rgb(145, 13, 116)"
+          >
+            Save changes
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-
-<!-- Button trigger modal -->
   <!-- Modal -->
-  <div class="modal fade" id="graphModal" tabindex="-1" aria-labelledby="graphModalLabel" aria-hidden="true">
+  <div
+    class="modal fade"
+    id="immunization"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="graphModalLabel">Growth Monitoring Chart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="exampleModalLabel">Growth Monitoring Chart</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
-            <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">DATE</th>
-                    <th scope="col">AGE</th>
-                    <th scope="col">WEIGHT</th>
-                    <th scope="col">LENGTH</th>
-                    <th scope="col">HO</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td>Birth</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+          <table class="table">
+            <thead
+              class="thead"
+              style="color: white; background-color: rgb(145, 13, 116)"
+            >
+              <tr>
+                <th scope="col">DATE</th>
+                <th scope="col">AGE</th>
+                <th scope="col">WEIGHT</th>
+                <th scope="col">LENGTH</th>
+                <th scope="col">HO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let detail of growth" style="color: black">
+                <td>{{ detail.date }}</td>
+                <td>{{ detail.age }}</td>
+                <td>{{ detail.weight }}</td>
+                <td>{{ detail.height }}</td>
+                <td>{{ detail.ho }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn" style="color: white; background-color: rgb(145, 13, 116);">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn"
+            style="color: white; background-color: rgb(145, 13, 116)"
+          >
+            Save changes
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-
-  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="appointmentModalLabel">Vaccination Appointments</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <table class="table">
-                <thead class="thead"  style="color: white;  background-color: rgb(145, 13, 116);">
-                  <tr>
-                    <th scope="col">TIME DUE</th>
-                    <th scope="col">VACCINE TO BE ADMINISTERED</th>
-                    <th scope="col">APPOINTMENT DATE</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">At Birth</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6 Weeks</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10 Weeks</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">14 Weeks</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">9 Months</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">18 Months</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10 Years</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10 Years 6 Months</th>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn" style="color: white; background-color: rgb(145, 13, 116);">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
+ <!-- Modal -->
+ <div
+ class="modal fade"
+ id="appointmentModal"
+ tabindex="-1"
+ aria-labelledby="exampleModalLabel"
+ aria-hidden="true"
+>
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Vaccination Appointments</h5>
+       <button
+         type="button"
+         class="close"
+         data-dismiss="modal"
+         aria-label="Close"
+       >
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+        <table class="table">
+            <thead
+              class="thead"
+              style="color: white; background-color: rgb(145, 13, 116)"
+            >
+              <tr>
+                <th scope="col">VACCINE TO BE ADMINISTERED</th>
+                <th scope="col">NEXT APPOINTMENT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vac of immunizations" style="color: black">
+                <td>{{ vac.vaccine }}</td>
+                <td>{{ vac.nextAppointment }}</td>
+              </tr>
+            </tbody>
+          </table>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">
+         Close
+       </button>
+       <button
+         type="button"
+         class="btn"
+         style="color: white; background-color: rgb(145, 13, 116)"
+       >
+         Save changes
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
 </div>

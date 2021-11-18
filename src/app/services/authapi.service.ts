@@ -35,6 +35,14 @@ export class AuthapiService {
     });
   }
 
+  getGrowth() {
+    return this.http.get(this.APIUrl + '/app/api/growth/', {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('currentUser')}`,
+      }
+    });
+  }
+
 
   logout() {
     localStorage.removeItem('currentUser');
