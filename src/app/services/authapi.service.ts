@@ -6,9 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthapiService {
   // add api url here
+  
   // APIUrl='https://clinicaappcci.herokuapp.com/app/api/';
 
-  APIUrl = 'http://127.0.0.1:8000';
+  APIUrl = 'https://clinicacci-k.herokuapp.com';
 
   token = '60585863b8b3fe17772390cd1aa03064701e8195';
 
