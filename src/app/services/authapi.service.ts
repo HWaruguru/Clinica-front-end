@@ -7,12 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class AuthapiService {
   // add api url here
   
-  APIUrl='http://127.0.0.1:8000/';
-  // token= "2d5cd37d8c91fc6377d46126b25671e8d48a6108";
+  
 
-  // APIUrl = 'https://clinicacci-k.herokuapp.com';
+  APIUrl = 'https://clinicacci-k.herokuapp.com';
 
-  // token = '60585863b8b3fe17772390cd1aa03064701e8195';
+  token = '60585863b8b3fe17772390cd1aa03064701e8195';
 
   constructor(private http: HttpClient) {}
   loginUser(username: string, password: string) {
@@ -47,15 +46,6 @@ export class AuthapiService {
     });
   }
 
-  // vaccines================>>
-  getVaccine() {
-    return this.http.get(this.APIUrl + '/app/api/vaccine/', {
-      headers: {
-        "Authorization": `Token ${localStorage.getItem('currentUser')}`,
-      }
-    });
-  }
-
 
   logout() {
     localStorage.removeItem('currentUser');
@@ -80,4 +70,6 @@ export class AuthapiService {
       last_name: last_name,
     });
   }
+
+  
 }
