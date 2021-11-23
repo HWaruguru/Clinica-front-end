@@ -14,6 +14,8 @@ import { LandingComponent } from './components/landing/landing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DocprofileComponent } from './components/docprofile/docprofile.component';
+import { PatientprofileComponent } from './components/patientprofile/patientprofile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     AboutComponent,
     ContactComponent,
     LandingComponent,
-    ProfileComponent
+    ProfileComponent,
+    DocprofileComponent,
+    PatientprofileComponent
   ],
   imports: [
     BrowserModule,

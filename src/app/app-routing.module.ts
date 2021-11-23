@@ -6,6 +6,7 @@ import {RegisterComponent} from './components/register/register.component';
 import {AboutComponent} from './components/about/about.component';
 import {ContactComponent} from './components/contact/contact.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { DocprofileComponent } from './components/docprofile/docprofile.component';
 
 const routes: Routes = [
   { path: 'index', component: LandingComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'docprofile', component: DocprofileComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: '**', redirectTo: 'index', pathMatch: 'full'}
 ];

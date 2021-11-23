@@ -10,41 +10,9 @@ import { AuthapiService } from 'src/app/services/authapi.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  immunizations: Immunisation[] = []
-  growth: Growth[] = []
-  constructor(private service: AuthapiService, private router: Router) { }
-
-  fetchImmunizations() {
-    this.service.getImmunizations().subscribe(
-      (response: any) => {
-        console.log(response)
-        response.forEach((item: any) => {
-          this.immunizations.push(
-            new Immunisation(
-              item.vaccine, item.brand_name, item.batch_number, item.drug_expiry,
-              item.date_given, item.next_appointment)
-          )
-        });
-      }
-    );
-  }
-
-  fetchgrowth() {
-    this.service.getGrowth().subscribe(
-      (response: any) => {
-        console.log(response)
-        response.forEach((item: any) => {
-          this.growth.push(
-            new Growth(item.age, item.height, item.weight, item.HO, item.date)
-          )
-        });
-      }
-    );
-  }
-
+ isDoctor: boolean =  true;
+  
   ngOnInit(): void {
-    this.fetchImmunizations()
-    this.fetchgrowth()
   }
 
 }
