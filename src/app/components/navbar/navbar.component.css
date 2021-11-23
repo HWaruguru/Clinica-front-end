@@ -61,6 +61,27 @@
   box-shadow:inset 3px 3px 10px 1px rgba(0,0,0, .2),
              inset -3px -3px 10px 1px rgba(255,255,255,1);
 }
+@media (max-width: 767px) {
+  .menu ul li a {
+    font-size: 10px;
+    
+  }
+
+.menu ul li{
+  padding: 6px !important;
+}
+.logo{
+  display: none;
+}
+.navbar-brand{
+  margin-right: 10px !important;
+  margin-left: -100px ;
+}
+.login{
+  font-size: 10px;
+  margin-right: -50px;
+}
+}
 
 
 

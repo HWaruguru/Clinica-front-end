@@ -1,190 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import "~font-awesome/css/font-awesome.css";
-
-
-.contact-section {
-    /* background-image: url("https://thumbs.dreamstime.com/b/african-mother-feeding-baby-standing-white-background-panorama-cropped-happy-giving-bottle-milk-to-her-newborn-son-posing-214205880.jpg"); */
-    /* background-color: rgb(240, 228, 240); */
-    height: 78.5vh;
-    color: rgb(7, 0, 0);
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: -55px;
-    background-color: rgba(243, 242, 243, 0.705);
-    
-}
-/* p {
-    position: absolute;
-    left: 50px;
-    top: 250px;
-    width: 600px;
-    border: 3px solid #73AD21;
-    padding: 10px;
-} */
-
-/* *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-
-} */
-
-.contact{
-    position: relative;
-    /* min-height: 80.5vh; */
-    padding: 30px 100px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    background-size: cover;
-}
-
-.contact .content{
-    max-width: 700px;
-    text-align: center;
-
-}
-
-.contact .content h4{
-    font-size: 36px;
-    font-weight:500;
-    color:rgb(145, 13, 116);
-
-}
-.contact .content p{
- font-weight: 300;
- color:rgb(0, 0, 0);
-}
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-
-}
-.container .contactInfo{
-    width:50%;
-    display: flex;
-    flex-direction: column;
-}
-.container .contactInfo .box{
-  position: relative;
-  padding: 10px 0;
-  display: flex;
-  margin-left: 200px;
-}
-.container .contactInfo .box .icon{
-    min-width: 40px;
-    height: 40px;
-    background: rgba(145, 13, 116, 0.295);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-.container .contactInfo .box .text{
-    display: flex;
-    margin-left: 30px;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    flex-direction: column;
-    font-weight: 300;
-}
-.container .contactInfo .box .text h5{
-    font-weight: 500;
-    color: rgb(145, 13, 116);
-
-
-}
-.contactForm{
-
-    width: 30%;
+body {
+    margin: 0px;
     padding: 0px;
-    background-color: rgba(212, 7, 178, 0);
-    margin-right: 150px;
+    background-color: #ffffff;
+    height: 73.5vh;
+}
 
+a {
+    text-decoration: none;
 }
-.contactForm h3
-{
-    font-size: 22px;
-    color:rgb(145, 13, 116);
-    font-weight: 500;
 
+.social a {
+    padding: 20px;
+    color: rgb(145, 13, 116);
+    font-size: 1.1rem;
 }
-.contactForm .inputBox{
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-    background-color: rgba(212, 34, 78, 0)
-    
-}
-.contactForm .inputBox input,
-.contactForm .inputBox textarea
-{
-     width: 100%;
-     padding: 5px 0;
-     font-size: 16px;
-     margin: 10px 0;
-     border: none;
-     border-bottom: 2px solid #333;
-     outline: none;
-     resize: none;
-     background-color:rgba(195, 196, 214, 0);
 
-}
-.contactForm .inputBox span{
+#contact {
     position: absolute;
-    left: 0px;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5s;
-    color: rgb(104, 104, 104);
-
-
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: flex
 }
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox textarea:focus ~span,
-.contactForm .inputBox textarea:valid ~ span{
-    color:rgb(145, 13, 116);
-    font-size: 12px;
-    transform: translateY(-20px);
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 }
-.contactForm .inputBox input[type="submit"]
-{
-    width: 90px;
-    background: rgb(145, 13, 116);
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
+
+.social a:hover {
+    color: #000000;
+    transition: all ease 0.3s;
+}
+
+.contact-box {
+    background-color: #bec2c583;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 30px;
+    height: 30rem;
+    width: 21rem;
+    box-shadow: 2px 0px 30px rgba(0, 0, 0, 0.199);
+}
+
+.c-heading h1 {
+    font-family: Roboto;
+    color: rgb(145, 13, 116);
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0px;
+    padding: 0px;
+}
+
+.c-heading p {
+    font-family: Roboto;
+    color: rgba(0, 0, 0, 0.568);
+    font-size: 0.8rem;
+    font-weight: lighter;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.c-inputs {
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-inputs input {
+    width: 240px;
+    height: 24px;
+    background-color: transparent;
     border: none;
-    cursor: pointer;
+    border-bottom: 1px solid rgba(251, 251, 251, 0.1);
+    outline: none;
+    margin: 10px 0px;
     padding: 10px;
-    font-size: 18px;
+    box-sizing: border-box;
+    color: #0000007e;
+    display: flex;
 }
 
-@media (max-width: 991px){
-    .contact{
-        padding: 50px;
+.c-inputs textarea {
+    width: 240px !important;
+    height: 120px !important;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(145, 13, 116);
+    color: #0000007e;
+    padding: 10px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+.c-inputs button {
+    width: 130px;
+    height: 40px;
+    color: #ffffff;
+    background-color: rgb(145, 13, 116);
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.c-inputs input:focus {
+    border-bottom: 1px solid rgb(145, 13, 116);
+    transition: all ease 0.5s;
+}
+
+.c-inputs textarea:focus {
+    border: none;
+    border-bottom: 1px solid rgb(145, 13, 116);
+    transition: all ease 0.5s;
+}
+
+.c-inputs button:active {
+    transform: scale(1.02);
+}
+
+.map {
+    filter: grayscale(0.2);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffffff;
+}
+
+@media (max-width:1100px) {
+    .map {
+        display: none;
     }
-    .container{
-        flex-direction: column;
+}
+
+@media (max-width:450px) {
+    .social {
+        display: none;
     }
-    .container .contactInfo{
-        margin-bottom: 40px;
-    }
-    .container .contactInfo,
-    .contactForm
-    {
+    .contact-box {
         width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    #contact {
+        position: static;
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .c-heading h1 {
+        font-size: 2.2rem;
+        text-align: center;
     }
 }
-
-

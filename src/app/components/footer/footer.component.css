@@ -1,73 +1,12 @@
-
-  
-
-  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-  
-  
-  
-
-
-
-    body {
-      min-width: 92px !important; 
-      background:#e1e6ec;
+.footer-content {
+    background: #e1e6ec;
     font-family: "Poppins", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 12px;
     font-weight: normal;
-   }
-  
+}
 
-  
-
-
-/*   
-  
-  footer {
-    padding: 5px 0; }
-  
-  .footer-07 {
-    background: #ca1a1a00; }
-    .footer-07 a {
-      color: #83e1f1; }
-    .footer-07 p {
-      color: rgba(119, 199, 231, 0.575);
-     }
-    .footer-07 .footer-heading {
-      font-size: 30px;
-      color: rgb(240, 108, 115);
-      font-weight: 700;
-      margin-bottom: 0px; 
+@media (max-width: 767px) {
+    .footer-content {
+        margin-top: 850px
     }
-      .footer-07 .footer-heading .logo 
-      {
-        color: rgb(60, 208, 245);
-       }
-    .footer-07 .menu {
-      margin-bottom: 0px; }
-
-      .footer-07 .menu a 
-      {
-        color: rgba(119, 199, 224, 0.575);
-        margin:  10px;
-        text-transform: uppercase;
-        letter-spacing: 1px; 
-      }
-    .footer-07 .ftco-footer-social li a
-     {
-      background: transparent;
-      border: 1px solid #2b7d80;
-     } */
+}

@@ -1,71 +1,11 @@
-/* section{
-    padding: 60px 0;
-    overflow: hidden;
-    position: relative;
-    background-color: rgba(204, 11, 204, 0.705)
-
-} */
-
-/* .section-title{
-    text-align: center;
-    padding-bottom: 30px;
-    position: relative;
-} */
-/* .section-title h2{
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-} */
-/* .section-title h2::after{
-    content:"";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background:rgb(145, 13, 116);
-    bottom: 0;
-    left: calc(50% - 25px);
-
-} */
-/* .section-title p{
-    margin-bottom: 0;
-} */
-
-/* .section-bg{
-    padding: 0px 0;
-    color:rgb(0, 0, 0);  
-    background-color: blue; 
-} */
-
-/* .section-bg::before{
-    content:"";
-    background:rgba(145, 13, 116, 0.164);
-    position: absolute;
-    bottom: 60px;
-    top: 60px;
-    left: 0;
-    right: 0;
-    transform: skewY(-3deg);
-} */
-.container-fluid{
-    /* background-color:rgba(226, 36, 226, 0.705); */
+.container-fluid {
     height: 125.5vh;
     background-color: rgba(243, 242, 243, 0.705);
-    /* color: rgb(7, 0, 0);
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     margin-top: -55px;
     padding-top: 55px;
-    /* background-color: rgba(243, 242, 243, 0.705); */
     box-shadow: 0 0.05px 10px rgb(145, 13, 116);
-    
 }
 
-.card mb-6{
+.card mb-6 {
     padding-right: 20%;
 }
