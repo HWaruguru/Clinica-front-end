@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  
   constructor() { }
 
   getName(){
-    alert("Thank you for{{name}} contacting clinica. We will get back to you")
+    
+    alert("Thank you for contacting clinica. We will get back to you")
+
   }
 
   ngOnInit(): void {

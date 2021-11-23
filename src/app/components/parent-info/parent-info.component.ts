@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthapiService } from 'src/app/services/authapi.service';
 
 @Component({
   selector: 'app-parent-info',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService:AuthapiService ) { }
 
-  ngOnInit(): void {
+ 
+
+ f:any;
+ parentPhoneNumber:any;
+
+
+  getPhoneUser(){
+    console.log(this.parentPhoneNumber)
+    this.authService.getMessage("+" +this.parentPhoneNumber).subscribe(data =>{
+      // console.log(this.parentPhoneNumber)
+      console.log(data)
+    }
+   
+    )
+    
+   
   }
 
+  ngOnInit(){
+    this.getPhoneUser()
+  }
 }

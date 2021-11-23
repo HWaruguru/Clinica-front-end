@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ParentInfoComponent } from './components/parent-info/parent-info.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -46,6 +46,8 @@ export class AuthapiService {
     });
   }
 
+// =======message============>>>>
+// https://clinicacci-k.herokuapp.com/app/api/send-message
 
   logout() {
     localStorage.removeItem('currentUser');
@@ -70,6 +72,13 @@ export class AuthapiService {
       last_name: last_name,
     });
   }
+
+  getMessage(phone: string,) {
+    return this.http.post(this.APIUrl + '/app/api/send-message', {
+      phone: phone
+    });
+  }
+
 
   
 }
