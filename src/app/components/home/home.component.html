@@ -25,6 +25,14 @@
       >
         Vaccination Appointments
       </button>
+      <button
+        class="btn btn-block text-light modalbtn"
+        data-toggle="modal"
+        data-target="#historyModal"
+        type="button"
+      >
+        Medical History
+      </button>
     </div>
     <div class="col-md-7"></div>
   </div>
@@ -102,7 +110,9 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Growth Monitoring Chart</h5>
+          <h5 class="modal-title" id="exampleModalLabel">
+            Growth Monitoring Chart
+          </h5>
           <button
             type="button"
             class="close"
@@ -153,29 +163,31 @@
     </div>
   </div>
 
- <!-- Modal -->
- <div
- class="modal fade"
- id="appointmentModal"
- tabindex="-1"
- aria-labelledby="exampleModalLabel"
- aria-hidden="true"
->
- <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLabel">Vaccination Appointments</h5>
-       <button
-         type="button"
-         class="close"
-         data-dismiss="modal"
-         aria-label="Close"
-       >
-         <span aria-hidden="true">&times;</span>
-       </button>
-     </div>
-     <div class="modal-body">
-        <table class="table">
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="appointmentModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Vaccination Appointments
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
             <thead
               class="thead"
               style="color: white; background-color: rgb(145, 13, 116)"
@@ -192,20 +204,75 @@
               </tr>
             </tbody>
           </table>
-     </div>
-     <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-dismiss="modal">
-         Close
-       </button>
-       <button
-         type="button"
-         class="btn"
-         style="color: white; background-color: rgb(145, 13, 116)"
-       >
-         Save changes
-       </button>
-     </div>
-   </div>
- </div>
-</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn"
+            style="color: white; background-color: rgb(145, 13, 116)"
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="historyModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Medical History</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead
+              class="thead"
+              style="color: white; background-color: rgb(145, 13, 116)"
+            >
+              <tr>
+                <th scope="col">MEDICAL HISTORY</th>
+                <th scope="col">DATE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vac of immunizations" style="color: black">
+                <td>{{ vac.vaccine }}</td>
+                <td>{{ vac.nextAppointment }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn"
+            style="color: white; background-color: rgb(145, 13, 116)"
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
