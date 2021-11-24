@@ -11,7 +11,6 @@
 .modalbtn{
     background-color: rgb(145, 13, 116);
     width: 70%;
-    margin-top: 10px;
     margin-left: 10px;
     font-size: 30px;
     text-align: justify;
@@ -22,4 +21,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+}
+
+h4 {
+    margin-top: 15px;
+    margin-left: 15px;
 }
