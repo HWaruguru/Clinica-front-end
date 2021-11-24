@@ -7,6 +7,7 @@ import {AboutComponent} from './components/about/about.component';
 import {ContactComponent} from './components/contact/contact.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { DocprofileComponent } from './components/docprofile/docprofile.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 const routes: Routes = [
   { path: 'index', component: LandingComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'docprofile', component: DocprofileComponent},
+  {path: 'parent', component: ParentComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: '**', redirectTo: 'index', pathMatch: 'full'}
 ];

@@ -17,6 +17,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { DocprofileComponent } from './components/docprofile/docprofile.component';
 import { PatientprofileComponent } from './components/patientprofile/patientprofile.component';
 import { PatientselectComponent } from './components/patientselect/patientselect.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PatientselectComponent } from './components/patientselect/patientselect
     ProfileComponent,
     DocprofileComponent,
     PatientprofileComponent,
-    PatientselectComponent
+    PatientselectComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
