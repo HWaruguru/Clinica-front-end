@@ -121,4 +121,11 @@ export class AuthapiService {
       last_name: last_name,
     });
   }
+
+  getMessage(phone: string,) {
+    return this.http.post(this.APIUrl + '/app/api/send-message', {
+      phone: phone
+    });
+  }
+
 }
