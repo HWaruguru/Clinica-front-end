@@ -1,4 +1,4 @@
-<div class="card mb-6" id="p-info">
+<div class="card mb-6 p-info" id="p-info">
     <div class="row">
       <div class="col-md-6">
         <img src="https://media.istockphoto.com/photos/african-american-mother-having-video-call-with-a-pediatrician-while-picture-id1288681671?k=20&m=1288681671&s=612x612&w=0&h=9Lq3nQhNP9zqps4cgwllSYyeidy0P0MynaoeUzukUOc=" alt="...">
@@ -8,17 +8,17 @@
             <form (ngSubmit)="getPhoneUser()" #f="ngForm">
                 <div class="mb-3">
                     <label for="Inputname"  class="form-label parentInfo"><b>Parent Name</b></label>
-                    <input type="Name" name="parentName" class="form-control" id="Inputname" ngModel placeholder="enter here...">
+                    <input type="Name" name="parentName" class="form-control" id="Inputname" ngModel placeholder="Enter here...">
                   </div>
             
                   <div class="mb-3">
                     <label for="Inputname"  class="form-label parentInfo"><b>Child's Name</b></label>
-                    <input type="Name" name="childName" class="form-control" id="Inputname" ngModel placeholder="enter here...">
+                    <input type="Name" name="childName" class="form-control" id="Inputname" ngModel placeholder="Enter here...">
                   </div>
             
                   <div class="mb-3">
                     <label for="contact" class="form-label parentInfo"><b>Parent's Phone Number</b></label>
-                    <input type="Number" name="parentPhoneNumber" class="form-control" id="Inputnumber" [(ngModel)]="parentPhoneNumber" placeholder="enter here...">
+                    <input type="Number" name="parentPhoneNumber" class="form-control" id="Inputnumber" [(ngModel)]="parentPhoneNumber" placeholder="Example +254722000000">
                   </div>
                
                 <button type="submit" class="btn ">Submit</button>

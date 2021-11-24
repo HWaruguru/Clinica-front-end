@@ -16,7 +16,7 @@
         <ul style="color:rgb(145, 13, 116)">
    
           <li *ngIf='currentUserValue()'><a routerLink ="/home" style="text-decoration: none; color:rgb(145, 13, 116)">Home </a></li>
-          <li><a  routerLink="/parent" style="text-decoration:none ; color:rgb(145, 13, 116)" >Parent Info</a></li>
+          <li *ngIf='currentUserValue()'><a  routerLink="/parent" style="text-decoration:none ; color:rgb(145, 13, 116)" >Parent Info</a></li>
 
           <li><a  routerLink="/about" style="text-decoration: none; color:rgb(145, 13, 116)">About</a></li>
           

@@ -1,6 +1,15 @@
 .parentInfo{
     color: rgb(145, 13, 116);
+   
     
+}
+
+#p-info{
+    height: 74.5vh;
+}
+
+.p-info{
+    margin-top: 35px;
 }
 
 .btn{

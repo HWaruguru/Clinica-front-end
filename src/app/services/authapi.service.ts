@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthapiService {
-  // APIUrl = 'https://clinicacci-k.herokuapp.com';
-  APIUrl = 'http://127.0.0.1:8000';
+  APIUrl = 'https://clinicacci-k.herokuapp.com';
+  // APIUrl = 'http://127.0.0.1:8000';
 
   constructor(private http: HttpClient) {}
   loginUser(username: string, password: string) {
@@ -123,7 +123,7 @@ export class AuthapiService {
   }
 
   getMessage(phone: string,) {
-    return this.http.post(this.APIUrl + '/app/api/send-message', {
+    return this.http.post(this.APIUrl + '/app/api/send-message/', {
       phone: phone
     });
   }
