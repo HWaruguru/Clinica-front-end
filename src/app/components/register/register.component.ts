@@ -10,12 +10,14 @@ import { AuthapiService } from 'src/app/services/authapi.service';
 })
 export class RegisterComponent implements OnInit {
   passwordMismatch: boolean = false;
+  usernameExists: boolean = false;
 
   constructor(private service: AuthapiService, private router: Router) {}
   ngOnInit(): void {}
 
   registerUser(form: NgForm) {
     this.passwordMismatch = false
+    this.usernameExists = false
     const email = form.value.email;
     const password = form.value.password;
     const confirmPassword = form.value.password2;
@@ -31,6 +33,7 @@ export class RegisterComponent implements OnInit {
             this.router.navigateByUrl('/login');
           },
           (error) => {
+            this.usernameExists = true
             console.log(error);
           }
         );

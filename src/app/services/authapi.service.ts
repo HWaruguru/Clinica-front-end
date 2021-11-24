@@ -5,13 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthapiService {
-  // add api url here
-  
-  // APIUrl='https://clinicaappcci.herokuapp.com/app/api/';
-
-  APIUrl = 'https://clinicacci-k.herokuapp.com';
-
-  token = '60585863b8b3fe17772390cd1aa03064701e8195';
+  // APIUrl = 'https://clinicacci-k.herokuapp.com';
+  APIUrl = 'http://127.0.0.1:8000';
 
   constructor(private http: HttpClient) {}
   loginUser(username: string, password: string) {
@@ -28,22 +23,80 @@ export class AuthapiService {
     });
   }
 
-  getImmunizations() {
-    return this.http.get(this.APIUrl + '/app/api/vaccine/', {
+  getImmunizations(user_id: number) {
+    return this.http.get(`${this.APIUrl}/app/api/vaccine/?user_id=${user_id}`, {
       headers: {
-        "Authorization": `Token ${localStorage.getItem('currentUser')}`,
+        "Authorization": `Token ${localStorage.getItem('token')}`,
       }
     });
   }
 
-  getGrowth() {
-    return this.http.get(this.APIUrl + '/app/api/growth/', {
+  getGrowth(user_id: number) {
+    return this.http.get(`${this.APIUrl}/app/api/growth/?user_id=${user_id}`, {
       headers: {
-        "Authorization": `Token ${localStorage.getItem('currentUser')}`,
+        "Authorization": `Token ${localStorage.getItem('token')}`,
       }
     });
   }
 
+  getHistory(user_id: number) {
+    return this.http.get(`${this.APIUrl}/app/api/medicalhistory/?user_id=${user_id}`, {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+      }
+    });
+  }
+
+  getAllPatients() {
+    return this.http.get(this.APIUrl + '/app/api/users/', {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+      }
+    });
+  }
+
+  getPatient(user_id: number) {
+    return this.http.get(`${this.APIUrl}/app/api/users/?user_id=${user_id}`, {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+      }
+    });
+  }
+
+  saveImmunization(vaccine: string, brand: string, batch: string, expiry: string, dateGiven: string, appointmentDate: string, user_id: number) {
+    return this.http.post(`${this.APIUrl}/app/api/vaccine/`,
+    {"patient": user_id, "vaccine": vaccine,
+      "brand_name": brand, "batch_number": batch,
+      "drug_expiry": expiry, "next_appointment": appointmentDate,
+      "date_given": dateGiven},
+    {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+      }
+    });
+  }
+
+  saveGrowth(age: number, weight: number, height: number, HO: number, date: string, user_id: number) {
+    return this.http.post(`${this.APIUrl}/app/api/growth/`,
+    {"patient": user_id, "age": age,
+      "weight": weight, "height": height,
+      "HO": HO, "date": date,},
+    {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+      }
+    });
+  }
+
+  saveHistory(history: string, medication: string, date: string, user_id: number) {
+    return this.http.post(`${this.APIUrl}/app/api/medicalhistory/`,
+    {"patient": user_id, "disease_history": history, "doctor_recommendation": medication, "date": date,},
+    {
+      headers: {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+      }
+    });
+  }
 
   logout() {
     localStorage.removeItem('currentUser');

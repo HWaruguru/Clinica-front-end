@@ -15,7 +15,7 @@
       <div class = "menu">
         <ul style="color:rgb(145, 13, 116)">
    
-          <li><a routerLink ="/home" style="text-decoration: none; color:rgb(145, 13, 116)">Home </a></li>
+          <li *ngIf='currentUserValue()'><a routerLink ="/home" style="text-decoration: none; color:rgb(145, 13, 116)">Home </a></li>
           <li><a  routerLink="/about" style="text-decoration: none; color:rgb(145, 13, 116)">About</a></li>
           <li><a  routerLink="/contact" style="text-decoration: none; color:rgb(145, 13, 116)" >Contact Us</a></li>
         

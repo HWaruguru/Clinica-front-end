@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DocprofileComponent } from './components/docprofile/docprofile.component';
 import { PatientprofileComponent } from './components/patientprofile/patientprofile.component';
+import { PatientselectComponent } from './components/patientselect/patientselect.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PatientprofileComponent } from './components/patientprofile/patientprof
     LandingComponent,
     ProfileComponent,
     DocprofileComponent,
-    PatientprofileComponent
+    PatientprofileComponent,
+    PatientselectComponent
   ],
   imports: [
     BrowserModule,

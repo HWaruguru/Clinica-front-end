@@ -1,4 +1,5 @@
 <div class="home-section">
+  <h1>{{currentUser.username}}</h1>
     <div class="row" style="height: 100%">
       <div class="col-md-5 content">
         <button
@@ -249,13 +250,13 @@
               >
                 <tr>
                   <th scope="col">MEDICAL HISTORY</th>
-                  <th scope="col">DATE</th>
+                  <th scope="col">Doctor Reccommendations</th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let vac of immunizations" style="color: black">
-                  <td>{{ vac.vaccine }}</td>
-                  <td>{{ vac.nextAppointment }}</td>
+                <tr *ngFor="let history of historys" style="color: black">
+                  <td>{{ history.vaccine }}</td>
+                  <td>{{ history.nextAppointment }}</td>
                 </tr>
               </tbody>
             </table>

@@ -13,12 +13,17 @@ export class PatientprofileComponent implements OnInit {
 
   immunizations: Immunisation[] = []
   growth: Growth[] = []
-  constructor(private service: AuthapiService, private router: Router) { }
+  currentUser: any
+  historys: any
+  constructor(private service: AuthapiService, private router: Router) {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    console.log(this.currentUser)
+  }
 
   fetchImmunizations() {
-    this.service.getImmunizations().subscribe(
+    this.service.getImmunizations(this.currentUser.user_id).subscribe(
       (response: any) => {
-        console.log(response)
+        console.log(`fetchImmunizations: ${response}`)
         response.forEach((item: any) => {
           this.immunizations.push(
             new Immunisation(
@@ -31,14 +36,23 @@ export class PatientprofileComponent implements OnInit {
   }
 
   fetchgrowth() {
-    this.service.getGrowth().subscribe(
+    this.service.getGrowth(this.currentUser.user_id).subscribe(
       (response: any) => {
-        console.log(response)
+        console.log(`fetchgrowth: ${response}`)
         response.forEach((item: any) => {
           this.growth.push(
             new Growth(item.age, item.height, item.weight, item.HO, item.date)
           )
         });
+      }
+    );
+  }
+
+  fetchHistory() {
+    this.service.getHistory(this.currentUser.user_id).subscribe(
+      (response: any) => {
+        console.log(`fetchHistory: ${response}`)
+        this.historys= response;
       }
     );
   }
