@@ -397,7 +397,7 @@
 
 
 .login-dark {
-  height:33.5rem;
+  height:32.7rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -417,12 +417,27 @@
   border-radius:4px;
   transform:translate(-50%, -50%);
   position:absolute;
-  top:50%;
-  left:30%;
+  top:2%;
+  left:15%;
   color:#fff;
   opacity: 99;
   box-shadow:3px 3px 4px rgba(0,0,0,0.2);
+  animation: moveright 0.8s linear 1;
+  animation-delay: 0s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+@keyframes moveright {
+  0% {
+      transform: translateX(-100px);
+      visibility: visible;
   }
+  100% {
+      transform: translateX(0);
+      visibility: visible;
+  }
+}
+
   
   .login-dark .illustration {
   text-align:center;
@@ -476,4 +491,21 @@
   }    
 
   input{color: #6f7a85 !important}
+
+
+  @media (max-width: 576px) {
+    .registration-form form {
+        padding: 50px 20px;
+    }
+    .login-dark form{
+      margin-left: 15%;
+    }
+    .registration-form .form-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+        
+    }
+}
   
