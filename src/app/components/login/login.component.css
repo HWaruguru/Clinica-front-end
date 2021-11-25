@@ -1,6 +1,6 @@
 
 .login-dark {
-height:33.5rem;
+height:32.7rem;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
@@ -13,18 +13,32 @@ box-shadow: 0 2px 10px rgb(145, 13, 116);
 }
 
 .login-dark form {
-max-width:320px;
-width:90%;
-background-color:#fff;
-padding:40px;
-border-radius:4px;
-transform:translate(-50%, -50%);
-position:absolute;
-top:50%;
-left:30%;
-color:#fff;
-opacity: 99;
-box-shadow:3px 3px 4px rgba(0,0,0,0.2);
+    max-width: 320px;
+    width: 90%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    color: #fff;
+    opacity: 99;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+    animation: moveright 0.8s linear 1;
+    animation-delay: 0s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes moveright {
+    0% {
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
 }
 
 .login-dark .illustration {
