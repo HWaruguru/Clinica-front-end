@@ -1,6 +1,6 @@
 .home-section {
     background-image: url("https://thumbs.dreamstime.com/b/african-mother-feeding-baby-standing-white-background-panorama-cropped-happy-giving-bottle-milk-to-her-newborn-son-posing-214205880.jpg");
-    height: 86.5vh;
+    height: 75.5vh;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
     background-color: rgb(145, 13, 116);
     width: 70%;
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 24px;
     text-align: justify;
 }
 
